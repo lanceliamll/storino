@@ -1,0 +1,61 @@
+to login:
+  prisma login and login to prisma
+
+
+to deploy:
+  prisma deploy -e $env name
+
+
+live server 
+  https://us1.prisma.sh/lance-liam/storino/dev
+
+
+
+to Query
+  # Write your query or mutation here
+query {
+  users {
+    id
+    name
+    email
+  }
+}
+
+to Query with params
+  query {
+    users(where: {
+      name_contains: "lance:
+    }) {
+      id
+      name
+      email
+    }
+  }
+
+
+
+to Mutate //Create User
+  mutation {
+  createUser(data: {
+    name:"asdasdData",
+    email:"cool69@gmail.com"
+  }) {
+    name
+    email
+  }
+}
+
+pagination level //Basically i ququery nya yung first data.
+kapag meron pang ibang data, next page, kapag meerong ibang data sa previous. true yung has prev
+
+  query {
+    usersConnection(//first: 1) {
+      pageInfo {
+        hasNextPage,
+        hasPreviousPage
+      }
+    }
+    aggregate {
+      count
+    }
+  }

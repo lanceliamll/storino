@@ -7,10 +7,10 @@ const Navigation = () => {
     <div>
       <>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/">Navbar</Navbar.Brand>
+          <Navbar.Brand href="/">Storino</Navbar.Brand>
           <Nav className="mr-auto">
-            <Link href="/">
-              <a className="nav-link">Home</a>
+            <Link href="/shop">
+              <a className="nav-link">Shop</a>
             </Link>
             <Link href="/sell">
               <a className="nav-link">Sell</a>
